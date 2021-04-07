@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.button).setOnClickListener(v -> {
-            int indice = new Random().nextInt(nomi.length);
+            int indice = new Random().nextInt(nomi.length - 1);
             String nome = nomi[indice];
             ((TextView)findViewById(R.id.textView)).setText("Persona: " + nome);
         });
