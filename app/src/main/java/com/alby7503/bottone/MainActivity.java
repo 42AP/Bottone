@@ -7,6 +7,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView scritta;
     private final String[] nomi = { "Pamela", "Balocchi", "Beghea", "Bonfini", "Buonuomo", "Cameriere", "Cervoni",
             "De Micheli", "Fontana", "Gallo", "Franco", "Lattanzi", "Lopatowski", "Manili", "Mena", "Morelli",
             "Paolozzi", "Pietrucci", "Petralia", "Puzzello", "Vona", "Zambrano", "Zouairi" };
@@ -18,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(v -> {
             int indice = new Random().nextInt(nomi.length - 1);
             String nome = nomi[indice];
-            ((TextView)findViewById(R.id.textView)).setText("Persona: " + nome);
+            scritta = (TextView)findViewById(R.id.textView);
+            scritta.setText("Persona: " + nome);
         });
     }
 }
